@@ -1,0 +1,14 @@
+#ignoring csv and tgz files
+*.csv
+*.tgz
+
+#ignore artifacts folder
+artifacts/
+
+#ignoring pyc files
+*.pyc
+
+#log and databases
+*.log
+*.sql
+*.sqlite
