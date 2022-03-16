@@ -100,7 +100,7 @@ def df_split(df, data_folder):
             ['path', 'source'],
             axis=1
         ),
-        test_size=0.2,
+        test_size=0.25,
         shuffle=True,
         random_state=42
     )

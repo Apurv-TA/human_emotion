@@ -1,7 +1,7 @@
 audio_emotion
 ===============
 
-Submodules
+Modules
 ----------
 
 audio_emotion.get\_argument module
@@ -43,6 +43,23 @@ audio_emotion.basic\_model module
    :members:
    :undoc-members:
    :show-inheritance:
+
+audio_emotion.score module
+--------------------
+
+.. automodule:: audio_emotion.score
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+audio_emotion.data\_augmentation module
+--------------------
+
+.. automodule:: audio_emotion.data_augmentation
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 
 Module contents
 ---------------

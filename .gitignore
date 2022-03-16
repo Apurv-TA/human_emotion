@@ -2,8 +2,13 @@
 *.csv
 *.tgz
 
+# ignoring wav file
+*.wav
+
 # ignore pickle folder
 *.pkl
+*.json
+*.h5
 
 # ignoring pyc files
 *.pyc

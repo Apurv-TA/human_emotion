@@ -86,12 +86,14 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">src</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">audio_emotion</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#modules">Modules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#audio-emotion-get-argument-module">audio_emotion.get_argument module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#audio-emotion-ingest-data-module">audio_emotion.ingest_data module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#audio-emotion-logging-setup-module">audio_emotion.logging_setup module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#audio-emotion-feature-extraction-module">audio_emotion.feature_extraction module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#audio-emotion-basic-model-module">audio_emotion.basic_model module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#audio-emotion-score-module">audio_emotion.score module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#audio-emotion-data-augmentation-module">audio_emotion.data_augmentation module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-audio_emotion">Module contents</a></li>
 </ul>
 </li>
@@ -165,8 +167,8 @@
             
   <section id="audio-emotion">
 <h1>audio_emotion<a class="headerlink" href="#audio-emotion" title="Permalink to this headline">¶</a></h1>
-<section id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+<section id="modules">
+<h2>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h2>
 </section>
 <section id="audio-emotion-get-argument-module">
 <h2>audio_emotion.get_argument module<a class="headerlink" href="#audio-emotion-get-argument-module" title="Permalink to this headline">¶</a></h2>
@@ -452,6 +454,240 @@ the user</p>
 </dl>
 </div></blockquote>
 <p>The result of the basic modelling.</p>
+</dd></dl>
+
+</section>
+<section id="audio-emotion-score-module">
+<h2>audio_emotion.score module<a class="headerlink" href="#audio-emotion-score-module" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-audio_emotion.score"></span><p>score.py docstring</p>
+<p>Module created for the purpose of determining how well our model performed on
+test data.</p>
+<p>Primarily our model was designed to determine ‘gender_emotion’ of the speaker,
+here we have also added functions to determine its performance if only
+gender or emotion classification is done.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="audio_emotion.score.class_report">
+<span class="sig-prename descclassname"><span class="pre">audio_emotion.score.</span></span><span class="sig-name descname"><span class="pre">class_report</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#audio_emotion.score.class_report" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to do classification report on our dataframe.</p>
+<p>The default arguments of the function can be overwritten when supplied by
+the user</p>
+<blockquote>
+<div><dl class="simple">
+<dt>df: pd.Dataframe</dt><dd><p>The dataframe for which performance is to be determined.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>Classification report of the dataframe based on the labels present.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="audio_emotion.score.emotion_test">
+<span class="sig-prename descclassname"><span class="pre">audio_emotion.score.</span></span><span class="sig-name descname"><span class="pre">emotion_test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">processed_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#audio_emotion.score.emotion_test" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to do emotion classification on our data.</p>
+<p>The default arguments of the function can be overwritten when supplied by
+the user</p>
+<blockquote>
+<div><dl class="simple">
+<dt>processed_path: StrOrBytesPAth</dt><dd><p>The path where the processed data is saved.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>The modified dataframe.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="audio_emotion.score.gender_test">
+<span class="sig-prename descclassname"><span class="pre">audio_emotion.score.</span></span><span class="sig-name descname"><span class="pre">gender_test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">processed_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#audio_emotion.score.gender_test" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to predict gender classification on our data.</p>
+<p>The default arguments of the function can be overwritten when supplied by
+the user</p>
+<blockquote>
+<div><dl class="simple">
+<dt>processed_path: StrOrBytesPAth</dt><dd><p>The path where the processed data is saved.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>The modified dataframe.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="audio_emotion.score.load">
+<span class="sig-prename descclassname"><span class="pre">audio_emotion.score.</span></span><span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">processed_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">artifacts_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#audio_emotion.score.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to load the data and model.</p>
+<p>The default arguments of the function can be overwritten when supplied by
+the user</p>
+<blockquote>
+<div><dl class="simple">
+<dt>processed_path: StrOrBytesPAth</dt><dd><p>The path where the processed data needs to be saved.</p>
+</dd>
+<dt>data_folder: StrOrBytesPath</dt><dd><p>The path where the artifacts are needs to be saved.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>Prediction Dataframe containing the ‘actualvalues’ and ‘predictionvalues’.</p>
+</dd></dl>
+
+</section>
+<section id="audio-emotion-data-augmentation-module">
+<h2>audio_emotion.data_augmentation module<a class="headerlink" href="#audio-emotion-data-augmentation-module" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-audio_emotion.data_augmentation"></span><dl class="py function">
+<dt class="sig sig-object py" id="audio_emotion.data_augmentation.class_repo">
+<span class="sig-prename descclassname"><span class="pre">audio_emotion.data_augmentation.</span></span><span class="sig-name descname"><span class="pre">class_repo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#audio_emotion.data_augmentation.class_repo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to do classification report on our dataframe.</p>
+<p>The default arguments of the function can be overwritten when supplied by
+the user</p>
+<blockquote>
+<div><dl class="simple">
+<dt>df: pd.Dataframe</dt><dd><p>The dataframe for which performance is to be determined.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>Classification report of the dataframe based on the labels present.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="audio_emotion.data_augmentation.data_prep">
+<span class="sig-prename descclassname"><span class="pre">audio_emotion.data_augmentation.</span></span><span class="sig-name descname"><span class="pre">data_prep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">processed_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#audio_emotion.data_augmentation.data_prep" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to prepare data for model creation.</p>
+<p>The default arguments of the function can be overwritten when supplied by
+the user</p>
+<blockquote>
+<div><dl class="simple">
+<dt>processed_path: StrOrBytesPAth</dt><dd><p>The path where the processed data is saved.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>The modified dataframe.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="audio_emotion.data_augmentation.emotion_test">
+<span class="sig-prename descclassname"><span class="pre">audio_emotion.data_augmentation.</span></span><span class="sig-name descname"><span class="pre">emotion_test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">processed_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#audio_emotion.data_augmentation.emotion_test" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to do emotion classification on our data.</p>
+<p>The default arguments of the function can be overwritten when supplied by
+the user</p>
+<blockquote>
+<div><dl class="simple">
+<dt>processed_path: StrOrBytesPAth</dt><dd><p>The path where the processed data is saved.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>The modified dataframe.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="audio_emotion.data_augmentation.gender_test">
+<span class="sig-prename descclassname"><span class="pre">audio_emotion.data_augmentation.</span></span><span class="sig-name descname"><span class="pre">gender_test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">processed_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#audio_emotion.data_augmentation.gender_test" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to predict gender classification on our data.</p>
+<p>The default arguments of the function can be overwritten when supplied by
+the user</p>
+<blockquote>
+<div><dl class="simple">
+<dt>processed_path: StrOrBytesPAth</dt><dd><p>The path where the processed data is saved.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>The modified dataframe.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="audio_emotion.data_augmentation.noise">
+<span class="sig-prename descclassname"><span class="pre">audio_emotion.data_augmentation.</span></span><span class="sig-name descname"><span class="pre">noise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#audio_emotion.data_augmentation.noise" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to add white noise to our data.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>data: np.ndarray</dt><dd><p>Data on which tuning is performed.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>The modified data.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="audio_emotion.data_augmentation.normalize">
+<span class="sig-prename descclassname"><span class="pre">audio_emotion.data_augmentation.</span></span><span class="sig-name descname"><span class="pre">normalize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_test</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#audio_emotion.data_augmentation.normalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to do some normalization on ‘X_train’ and ‘X_test’.</p>
+<p>The default arguments of the function can be overwritten when supplied by
+the user</p>
+<blockquote>
+<div><dl class="simple">
+<dt>X_train: pd.Dataframe</dt><dd><p>The features of training set.</p>
+</dd>
+<dt>X_test: pd.Dataframe</dt><dd><p>The features of testing set.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>Normalized ‘X_train’ and ‘X_test’.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="audio_emotion.data_augmentation.pred">
+<span class="sig-prename descclassname"><span class="pre">audio_emotion.data_augmentation.</span></span><span class="sig-name descname"><span class="pre">pred</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">processed_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#audio_emotion.data_augmentation.pred" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to load the data and model.</p>
+<p>The default arguments of the function can be overwritten when supplied by
+the user</p>
+<blockquote>
+<div><dl class="simple">
+<dt>path: StrOrBytesPath</dt><dd><p>The path where the artifacts are needs to be saved.</p>
+</dd>
+<dt>processed_path: StrOrBytesPAth</dt><dd><p>The path where the processed data needs to be saved.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>Prediction Dataframe containing the ‘actualvalues’ and ‘predictionvalues’.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="audio_emotion.data_augmentation.seq_model_augment">
+<span class="sig-prename descclassname"><span class="pre">audio_emotion.data_augmentation.</span></span><span class="sig-name descname"><span class="pre">seq_model_augment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#audio_emotion.data_augmentation.seq_model_augment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to do sequential modelling on augmented data.</p>
+<p>The default arguments of the function can be overwritten when supplied by
+the user</p>
+<blockquote>
+<div><dl class="simple">
+<dt>X_train: pd.Dataframe</dt><dd><p>The features of training set.</p>
+</dd>
+<dt>X_test: pd.Dataframe</dt><dd><p>The features of testing set.</p>
+</dd>
+<dt>y_train: pd.Dataframe</dt><dd><p>Labels of the training set.</p>
+</dd>
+<dt>y_test: pd.Dataframe</dt><dd><p>Labels of the testing set.</p>
+</dd>
+<dt>path: StrOrBytesPath</dt><dd><p>Location where file is to be saved.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>The result of modelling performed on augmented data.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="audio_emotion.data_augmentation.speedNpitch">
+<span class="sig-prename descclassname"><span class="pre">audio_emotion.data_augmentation.</span></span><span class="sig-name descname"><span class="pre">speedNpitch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#audio_emotion.data_augmentation.speedNpitch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to do speed and Pitch Tuning.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>data: np.ndarray</dt><dd><p>Data on which tuning is performed.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>The modified data.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="audio_emotion.data_augmentation.split">
+<span class="sig-prename descclassname"><span class="pre">audio_emotion.data_augmentation.</span></span><span class="sig-name descname"><span class="pre">split</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#audio_emotion.data_augmentation.split" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to split the Dataframe to training and testing set.</p>
+<p>The default arguments of the function can be overwritten when supplied by
+the user</p>
+<blockquote>
+<div><dl class="simple">
+<dt>df: pd.Dataframe</dt><dd><p>Feature extracted Dataframe.</p>
+</dd>
+<dt>data_folder: StrOrBytesPath</dt><dd><p>The path where the data will be saved.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>X_train, X_test, y_train, y_test</p>
 </dd></dl>
 
 </section>

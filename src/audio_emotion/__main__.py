@@ -13,6 +13,7 @@ from logging_setup import configure_logger
 from ingest_data import load_data
 from feature_extraction import extract_split
 from basic_model import (get_data, normalization, baseline_test, seq_model)
+from score import class_report, load, gender_test, emotion_test
 
 
 if __name__ == "__main__":
@@ -22,7 +23,6 @@ if __name__ == "__main__":
     DATA = argument().data
     SAVE = argument().save
     DATA_PATH = op.join(HERE, DATA)
-    PROCESSED_FOLDER = op.join(HERE, DATA, "processed")
     PROCESSED_FOLDER = op.join(HERE, DATA, "processed")
     ARTIFACT_FOLDER = op.join(HERE, SAVE)
 
@@ -87,3 +87,25 @@ if __name__ == "__main__":
 
     seq_model(X_train, X_test, y_train, y_test, path=ARTIFACT_FOLDER)
     logger.info(f"Saving the artifacts at {ARTIFACT_FOLDER}")
+
+    # ----------
+
+    logger.info("Starting score.py")
+
+    pred_df = load(
+        processed_path=PROCESSED_FOLDER,
+        artifacts_path=ARTIFACT_FOLDER
+    )
+    logger.debug(
+        f"Gender emotion classification\n{class_report(pred_df)}"
+    )
+
+    gender_df = gender_test(processed_path=PROCESSED_FOLDER)
+    logger.debug(
+        f"Gender classificastion:\n{class_report(gender_df)}"
+    )
+
+    emotion_df = emotion_test(processed_path=PROCESSED_FOLDER)
+    logger.debug(
+        f"Emotion classification:\n{class_report(emotion_df)}"
+    )

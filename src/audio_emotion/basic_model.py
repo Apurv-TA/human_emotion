@@ -210,13 +210,13 @@ def seq_model(X_train, X_test, y_train, y_test, path):
         X_train,
         y_train,
         batch_size=16,
-        epochs=10,
+        epochs=80,
         verbose=1,
         validation_data=(X_test, y_test),
     )
 
 
-    model_name = "seq_model"
+    model_name = "seq_model.h5"
     model_path = op.join(path, model_name)
     model.save(model_path)
 
