@@ -1,0 +1,510 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>audio_emotion &mdash; audio_emotion 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="src" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> audio_emotion
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">src</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">audio_emotion</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#audio-emotion-get-argument-module">audio_emotion.get_argument module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#audio-emotion-ingest-data-module">audio_emotion.ingest_data module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#audio-emotion-logging-setup-module">audio_emotion.logging_setup module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#audio-emotion-feature-extraction-module">audio_emotion.feature_extraction module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#audio-emotion-basic-model-module">audio_emotion.basic_model module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-audio_emotion">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">audio_emotion</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">src</a> &raquo;</li>
+        
+      <li>audio_emotion</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/audio_emotion.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="audio-emotion">
+<h1>audio_emotion<a class="headerlink" href="#audio-emotion" title="Permalink to this headline">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="audio-emotion-get-argument-module">
+<h2>audio_emotion.get_argument module<a class="headerlink" href="#audio-emotion-get-argument-module" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-audio_emotion.get_argument"></span><p>get-argument.py docstring
+This module was created to define the command line level arguments
+that will be used in this package.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="audio_emotion.get_argument.argument">
+<span class="sig-prename descclassname"><span class="pre">audio_emotion.get_argument.</span></span><span class="sig-name descname"><span class="pre">argument</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#audio_emotion.get_argument.argument" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to get argument if given by the user
+Returns
+———-
+The argument namespace</p>
+</dd></dl>
+
+</section>
+<section id="audio-emotion-ingest-data-module">
+<h2>audio_emotion.ingest_data module<a class="headerlink" href="#audio-emotion-ingest-data-module" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-audio_emotion.ingest_data"></span><p>ingest_data.py docstring</p>
+<p>Module created for loading the data needed for the module and to combine them
+for easier feature extraction.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="audio_emotion.ingest_data.load_data">
+<span class="sig-prename descclassname"><span class="pre">audio_emotion.ingest_data.</span></span><span class="sig-name descname"><span class="pre">load_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#audio_emotion.ingest_data.load_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to combine all the loading functions present in this module.
+The functions are ‘load_data_SAVEE’, ‘load_data_RAVDESS’,
+‘load_data_TESS’ and ‘load_data_CREMA’.</p>
+<p>Additionally it also creates and saves a reference file containing the
+emotion and the path of the file.</p>
+<p>The default arguments of the function can be overwritten when supplied
+by the user.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>data_path: StrOrBytesPath</dt><dd><p>The location where data is to stored(downloaded).</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>A dataframe having emotion of the speaker categorized along with the
+file path.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="audio_emotion.ingest_data.load_data_CREMA">
+<span class="sig-prename descclassname"><span class="pre">audio_emotion.ingest_data.</span></span><span class="sig-name descname"><span class="pre">load_data_CREMA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">CREMA</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#audio_emotion.ingest_data.load_data_CREMA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to read and load CREMA dataset.</p>
+<p>The default arguments of the function can be overwritten when supplied by
+the user.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>CREMA: StrOrBytesPath</dt><dd><p>The path where the CREMA data is downloaded.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>A dataframe having emotion of the speaker categorized along with the
+file path.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="audio_emotion.ingest_data.load_data_RAVDESS">
+<span class="sig-prename descclassname"><span class="pre">audio_emotion.ingest_data.</span></span><span class="sig-name descname"><span class="pre">load_data_RAVDESS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">RAVDESS</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#audio_emotion.ingest_data.load_data_RAVDESS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to read and load RAVDESS dataset.</p>
+<p>The default arguments of the function can be overwritten when supplied by
+the user.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>RAVDESS: StrOrBytesPath</dt><dd><p>The path where the RAVDESS data is downloaded.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>A dataframe having emotion of the speaker categorized along with the
+file path.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="audio_emotion.ingest_data.load_data_SAVEE">
+<span class="sig-prename descclassname"><span class="pre">audio_emotion.ingest_data.</span></span><span class="sig-name descname"><span class="pre">load_data_SAVEE</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">SAVEE</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#audio_emotion.ingest_data.load_data_SAVEE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to read and load SAVEE dataset.</p>
+<p>The default arguments of the function can be overwritten when supplied by
+the user</p>
+<blockquote>
+<div><dl class="simple">
+<dt>SAVEE: StrOrBytesPath</dt><dd><p>The path where the SAVEE data is downloaded.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>A dataframe having emotion of the speaker categorized along with the
+file path.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="audio_emotion.ingest_data.load_data_TESS">
+<span class="sig-prename descclassname"><span class="pre">audio_emotion.ingest_data.</span></span><span class="sig-name descname"><span class="pre">load_data_TESS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">TESS</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#audio_emotion.ingest_data.load_data_TESS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to read and load TESS dataset.</p>
+<p>The default arguments of the function can be overwritten when supplied by
+the user.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>TESS: StrOrBytesPath</dt><dd><p>The path where the TESS data is downloaded.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>A dataframe having emotion of the speaker categorized along with the
+file path.</p>
+</dd></dl>
+
+</section>
+<section id="audio-emotion-logging-setup-module">
+<h2>audio_emotion.logging_setup module<a class="headerlink" href="#audio-emotion-logging-setup-module" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-audio_emotion.logging_setup"></span><p>logging_setup.py docstring
+Module created in order to setup the logger used in the package.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="audio_emotion.logging_setup.configure_logger">
+<span class="sig-prename descclassname"><span class="pre">audio_emotion.logging_setup.</span></span><span class="sig-name descname"><span class="pre">configure_logger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logger</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cfg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">console</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'DEBUG'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#audio_emotion.logging_setup.configure_logger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to setup configurations of logger through function.
+The individual arguments of <cite>log_file</cite>, <cite>console</cite>, <cite>log_level</cite> will
+overwrite the ones in cfg.
+Parameters
+———-</p>
+<blockquote>
+<div><dl class="simple">
+<dt>logger:</dt><dd><p>Predefined logger object if present. If None a new logger
+object will be created from root.</p>
+</dd>
+<dt>cfg: dict()</dt><dd><p>Configuration of the logging to be implemented by default</p>
+</dd>
+<dt>log_file: str</dt><dd><p>Path to the log file for logs to be stored</p>
+</dd>
+<dt>console: bool</dt><dd><p>To include a console handler(logs printing in console)</p>
+</dd>
+<dt>log_level: str</dt><dd><p>One of <cite>[“INFO”,”DEBUG”,”WARNING”,”ERROR”,”CRITICAL”]</cite>
+default - <cite>“DEBUG”</cite></p>
+</dd>
+</dl>
+</div></blockquote>
+<p>logging.Logger</p>
+</dd></dl>
+
+</section>
+<section id="audio-emotion-feature-extraction-module">
+<h2>audio_emotion.feature_extraction module<a class="headerlink" href="#audio-emotion-feature-extraction-module" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-audio_emotion.feature_extraction"></span><p>feature_extraction.py docstring</p>
+<p>Module created for extracting and converting the feature from the data
+to a form which is needed for model creation.</p>
+<p>Additionally it also splits the data to training and testing set.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="audio_emotion.feature_extraction.df_split">
+<span class="sig-prename descclassname"><span class="pre">audio_emotion.feature_extraction.</span></span><span class="sig-name descname"><span class="pre">df_split</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_folder</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#audio_emotion.feature_extraction.df_split" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to split the Dataframe to training and testing set.</p>
+<p>The default arguments of the function can be overwritten when supplied by
+the user</p>
+<blockquote>
+<div><dl class="simple">
+<dt>df: pd.Dataframe</dt><dd><p>Feature extracted Dataframe.</p>
+</dd>
+<dt>data_folder: StrOrBytesPath</dt><dd><p>The path where the data will be saved.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>Training and testing data.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="audio_emotion.feature_extraction.extract_split">
+<span class="sig-prename descclassname"><span class="pre">audio_emotion.feature_extraction.</span></span><span class="sig-name descname"><span class="pre">extract_split</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_folder</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#audio_emotion.feature_extraction.extract_split" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to combine all the functions in this module.</p>
+<p>The default arguments of the function can be overwritten when supplied by
+the user</p>
+<blockquote>
+<div><dl class="simple">
+<dt>ref: pd.Dataframe</dt><dd><p>Reference file containing the path to the audio files as well as
+the emotion associated with each audio.</p>
+</dd>
+<dt>data_folder: StrOrBytesPath</dt><dd><p>The path where the processed data needs to be saved.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>Feature extracted dataframe and training and testing dataframes.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="audio_emotion.feature_extraction.feature_extraction">
+<span class="sig-prename descclassname"><span class="pre">audio_emotion.feature_extraction.</span></span><span class="sig-name descname"><span class="pre">feature_extraction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_folder</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#audio_emotion.feature_extraction.feature_extraction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to extract feature from reference data. It also saves the
+extracted data for future use.</p>
+<p>The default arguments of the function can be overwritten when supplied by
+the user</p>
+<blockquote>
+<div><dl class="simple">
+<dt>ref: pd.Dataframe</dt><dd><p>Reference file containing the path to the audio files as well as
+the emotion associated with each audio.</p>
+</dd>
+<dt>data_folder: StrOrBytesPath</dt><dd><p>The path where the processed data needs to be saved.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>A dataframe having emotion of the speaker categorized along with the
+features.</p>
+</dd></dl>
+
+</section>
+<section id="audio-emotion-basic-model-module">
+<h2>audio_emotion.basic_model module<a class="headerlink" href="#audio-emotion-basic-model-module" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-audio_emotion.basic_model"></span><p>basic_model.py docstring</p>
+<p>Module created to do some basic modelling on our data.</p>
+<p>Additionally it also saves the result as a seperate csv file and
+the model as a pickle file for future use.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="audio_emotion.basic_model.baseline_test">
+<span class="sig-prename descclassname"><span class="pre">audio_emotion.basic_model.</span></span><span class="sig-name descname"><span class="pre">baseline_test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">models</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#audio_emotion.basic_model.baseline_test" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to do some baseline tests on our data.</p>
+<p>The default arguments of the function can be overwritten when supplied by
+the user</p>
+<blockquote>
+<div><dl class="simple">
+<dt>X_train: pd.Dataframe</dt><dd><p>The features of training set.</p>
+</dd>
+<dt>X_test: pd.Dataframe</dt><dd><p>The features of testing set.</p>
+</dd>
+<dt>y_train: pd.Dataframe</dt><dd><p>Labels of the training set.</p>
+</dd>
+<dt>y_test: pd.Dataframe</dt><dd><p>Labels of the testing set.</p>
+</dd>
+<dt>models: Dict</dt><dd><p>Dictionary of the form {model_name: model} supplied by the
+use.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>The result of the basic modelling.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="audio_emotion.basic_model.get_data">
+<span class="sig-prename descclassname"><span class="pre">audio_emotion.basic_model.</span></span><span class="sig-name descname"><span class="pre">get_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#audio_emotion.basic_model.get_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to load the train and test data and to divide it into
+features and labels.</p>
+<p>The default arguments of the function can be overwritten when supplied by
+the user</p>
+<blockquote>
+<div><dl class="simple">
+<dt>path: StrOrBytesPath</dt><dd><p>The path where from where the data is taken from.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>Training and testing data divided as ‘X_train’, ‘X_test’, ‘y_train’
+and ‘y_test’.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="audio_emotion.basic_model.normalization">
+<span class="sig-prename descclassname"><span class="pre">audio_emotion.basic_model.</span></span><span class="sig-name descname"><span class="pre">normalization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_test</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#audio_emotion.basic_model.normalization" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to do some normalization on ‘X_train’ and ‘X_test’.</p>
+<p>The default arguments of the function can be overwritten when supplied by
+the user</p>
+<blockquote>
+<div><dl class="simple">
+<dt>X_train: pd.Dataframe</dt><dd><p>The features of training set.</p>
+</dd>
+<dt>X_test: pd.Dataframe</dt><dd><p>The features of testing set.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>Normalized ‘X_train’ and ‘X_test’.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="audio_emotion.basic_model.seq_model">
+<span class="sig-prename descclassname"><span class="pre">audio_emotion.basic_model.</span></span><span class="sig-name descname"><span class="pre">seq_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#audio_emotion.basic_model.seq_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to do sequential modelling on our data.</p>
+<p>The default arguments of the function can be overwritten when supplied by
+the user</p>
+<blockquote>
+<div><dl class="simple">
+<dt>X_train: pd.Dataframe</dt><dd><p>The features of training set.</p>
+</dd>
+<dt>X_test: pd.Dataframe</dt><dd><p>The features of testing set.</p>
+</dd>
+<dt>y_train: pd.Dataframe</dt><dd><p>Labels of the training set.</p>
+</dd>
+<dt>y_test: pd.Dataframe</dt><dd><p>Labels of the testing set.</p>
+</dd>
+<dt>path: StrOrBytesPath</dt><dd><p>Location where file is to be saved.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>The result of the basic modelling.</p>
+</dd></dl>
+
+</section>
+<section id="module-audio_emotion">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-audio_emotion" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="modules.html" class="btn btn-neutral float-left" title="src" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2022, Apurv Master
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

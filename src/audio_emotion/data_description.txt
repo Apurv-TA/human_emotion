@@ -1,0 +1,4 @@
+['female_angry' 'female_disgust' 'female_fear' 'female_happy'
+ 'female_neutral' 'female_sad' 'female_surprise' 'male_angry'
+ 'male_disgust' 'male_fear' 'male_happy' 'male_neutral' 'male_sad'
+ 'male_surprise']
