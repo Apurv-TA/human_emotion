@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: audio-emotion-ApurvTA
+Version: 0.1
+Summary: In this package a model is created and implemented to determine emotion of the speaker based on the audio
+Home-page: https://github.com/Apurv-TA/human_emotion
+Author: Apurv Master
+Author-email: apurv.master@tigeranalytics.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/Apurv-TA/human_emotion/issues
+Keywords: audio emotion,sample package
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Human audio emotion prediction
+The purpose of this project is to create an audio emotion detection model which can classify the emotion of the user on the basis of the audio.
+s
+
+## Steps performed
+
+
+## To excute the script with default inputs
+python __main__.py
+
+## You can also used add arguments which can be observed by using
+python __main__.py -h
+
+## The result of which is given below
+python __main__.py [-h] [--log-level LOG_LEVEL] [--log-path LOG_PATH] [--no-console-log] [--data DATA] [--save SAVE] [-v {1,2,3}]
+
+

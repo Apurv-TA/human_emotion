@@ -276,7 +276,7 @@ def seq_model_augment(X_train, X_test, y_train, y_test, path):
         X_train,
         y_train,
         batch_size=16,
-        epochs=2,#100,
+        epochs=100,
         verbose=1,
         validation_data=(X_test, y_test),
     )

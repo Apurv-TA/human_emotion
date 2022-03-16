@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+src/audio_emotion/__init__.py
+src/audio_emotion/__main__.py
+src/audio_emotion/basic_model.py
+src/audio_emotion/data_augmentation.py
+src/audio_emotion/feature_extraction.py
+src/audio_emotion/get_argument.py
+src/audio_emotion/ingest_data.py
+src/audio_emotion/logging_setup.py
+src/audio_emotion/score.py
+src/audio_emotion_ApurvTA.egg-info/PKG-INFO
+src/audio_emotion_ApurvTA.egg-info/SOURCES.txt
+src/audio_emotion_ApurvTA.egg-info/dependency_links.txt
+src/audio_emotion_ApurvTA.egg-info/top_level.txt
