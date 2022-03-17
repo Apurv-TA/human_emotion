@@ -17,25 +17,13 @@ from tensorflow.keras.utils import to_categorical
 HERE = op.dirname(op.abspath("__file__"))
 test_path = op.join(HERE, "..", "..", "src", "audio_emotion")
 sys.path.append(test_path)
-LB = LabelEncoder()
 
 @pytest.fixture
 def test_df():
-    test = pd.read_csv("../../data/processed/test.csv")
+    test = pd.read_csv("../../data/processed/test.csv").sample(20)
 
+    return test
 
-    X_test = test.drop("labels", axis=1)
-    y_test = test["labels"].copy()
-
-    X_test = np.array(X_test)
-    y_test = np.array(y_test)
-
-    # one hot encode the target
-    lb = LabelEncoder()
-    y_test = np_utils.to_categorical(lb.fit_transform(y_test))
-    X_test = np.expand_dims(X_test, axis=2)
-
-    return X_test, y_test
 
 @pytest.fixture
 def get_model():
@@ -46,7 +34,7 @@ def get_model():
 
     # load weights into new model
     loaded_model.load_weights("../../artifacts/seq_model.h5")
- 
+
     # Keras optimiser
     opt = keras.optimizers.RMSprop(lr=0.00001, decay=1e-6)
     loaded_model.compile(
@@ -56,7 +44,19 @@ def get_model():
     )
     return loaded_model
 
+
 def test_model(test_df, get_model):
+    X_test = test_df.drop("labels", axis=1)
+    y_test = test_df["labels"].copy()
+
+    X_test = np.array(X_test)
+    y_test = np.array(y_test)
+
+    # one hot encode the target
+    lb = LabelEncoder()
+    y_test = np_utils.to_categorical(lb.fit_transform(y_test))
+    X_test = np.expand_dims(X_test, axis=2)
+
     score = get_model.evaluate(X_test, y_test, verbose=0)
 
     preds = get_model.predict(
@@ -64,7 +64,7 @@ def test_model(test_df, get_model):
         batch_size=16,
         verbose=1
     )
-    
+
     preds=preds.argmax(axis=1)
 
     # predictions 
@@ -84,4 +84,3 @@ def test_model(test_df, get_model):
     assert isinstance(X_test, np.ndarray)
     assert isinstance(y_test, np.ndarray)
     assert isinstance(finaldf, pd.DataFrame)
-
