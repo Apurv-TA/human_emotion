@@ -18,14 +18,5 @@ def test_df():
     return df
 
 
-@pytest.fixture
-def test_ref():
-    ref = pd.read_csv("../../data/processed/ref.csv")
-
-
-def test_load_data(test_ref):
-    assert isinstance(test_ref, pd.DataFrame)
-
-
 def test_final_data(test_df):
     assert isinstance(test_df, pd.DataFrame)
