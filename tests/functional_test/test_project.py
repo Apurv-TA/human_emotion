@@ -5,14 +5,7 @@ import sys
 import numpy as np
 import pandas as pd
 import pytest
-import keras
-import tensorflow as tf
-from keras.models import model_from_json
-from keras.utils import np_utils
-from sklearn.metrics import classification_report
 
-from sklearn.preprocessing import LabelEncoder
-from tensorflow.keras.utils import to_categorical
 
 HERE = op.dirname(op.abspath("__file__"))
 test_path = op.join(HERE, "..", "..", "src", "audio_emotion")
@@ -25,7 +18,7 @@ def test_df():
     return test
 
 
-def test_model(test_df, get_model):
+def test_model(test_df):
     assert isinstance(test_df, pd.DataFrame)
 
     X_test = test_df.drop("labels", axis=1)
